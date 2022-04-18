@@ -1,0 +1,201 @@
+
+**** 06/19/17 15:02:41 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Filter.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Filter.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\YoonKyoung\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FILTER
+X_U1         0 N00962 N01227 N01229 N01171 uA741
+V_V2         0 N01229 10
+V_V1         N01227 0 10
+V_V3         N011150 0 10
+X_U2         0 N01635 N011150 N011453 N01764 uA741
+V_V4         0 N011453 10
+V_V6         N01589 0  
++SIN 0 0.1 1k 0 0 0
+V_V7         N01459 0 -109mVdc
+R_R1         N01459 N00962  1k TC=0,0 
+R_R2         N01589 N00962  1k TC=0,0 
+R_R3         N01171 N00962  1k TC=0,0 
+R_R4         N01635 N01171  330 TC=0,0 
+R_R5         N01764 N01635  1k TC=0,0 
+C_C1         N01635 N01764  0.47u  TC=0,0 
+
+**** RESUMING Filter.cir ****
+.END
+
+**** 06/19/17 15:02:41 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Filter.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 06/19/17 15:02:41 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Filter.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/19/17 15:02:41 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Filter.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00962) 18.37E-06 (N01171)     .1091 (N01227)   10.0000 (N01229)  -10.0000     
+
+(N01459)    -.1090 (N01589)    0.0000 (N01635) 21.16E-06 (N01764)    -.3305     
+
+(X_U1.6)-16.59E-06 (X_U1.7)     .1311 (X_U1.8)     .1311 (X_U1.9)    0.0000     
+
+(X_U2.6) 35.89E-06 (X_U2.7)    -.3471 (X_U2.8)    -.3471 (X_U2.9)    0.0000     
+
+(N011150)   10.0000                   (N011453)  -10.0000                       
+
+(X_U1.10)    -.6077                   (X_U1.11)    9.9603                       
+
+(X_U1.12)    9.9603                   (X_U1.13)    -.5938                       
+
+(X_U1.14)    -.5938                   (X_U1.53)    9.0000                       
+
+(X_U1.54)   -9.0000                   (X_U1.90)     .4398                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   (X_U2.10)    -.6077                       
+
+(X_U2.11)    9.9603                   (X_U2.12)    9.9603                       
+
+(X_U2.13)    -.5938                   (X_U2.14)    -.5938                       
+
+(X_U2.53)    9.0000                   (X_U2.54)   -9.0000                       
+
+(X_U2.90)    -.3306                   (X_U2.91)   40.0000                       
+
+(X_U2.92)  -40.0000                   (X_U2.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.116E-03
+    V_V1        -1.116E-03
+    V_V3        -1.116E-03
+    V_V4        -1.116E-03
+    V_V6         1.837E-08
+    V_V7         1.090E-04
+    X_U1.vb     -1.659E-10
+    X_U1.vc      8.892E-12
+    X_U1.ve      1.034E-11
+    X_U1.vlim    4.398E-04
+    X_U1.vlp    -3.956E-11
+    X_U1.vln    -4.044E-11
+    X_U2.vb      3.589E-10
+    X_U2.vc      9.331E-12
+    X_U2.ve      9.902E-12
+    X_U2.vlim   -3.306E-04
+    X_U2.vlp    -4.033E-11
+    X_U2.vln    -3.967E-11
+
+    TOTAL POWER DISSIPATION   4.47E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/19/17 15:02:41 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Filter.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .91
+

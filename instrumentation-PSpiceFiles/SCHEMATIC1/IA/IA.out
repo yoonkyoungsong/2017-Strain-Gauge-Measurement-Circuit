@@ -1,0 +1,238 @@
+
+**** 06/19/17 15:00:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-IA"  [ C:\Users\YoonKyoung\instrumentation-PSpiceFiles\SCHEMATIC1\IA.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "IA.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\YoonKyoung\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INSTRUMENTATION
+X_U1         N00680 N00699 N000702 N000703 N00806 uA741
+V_V1         N000702 0 10
+V_V2         0 N000703 10
+V_V3         N002450 0 10
+V_V4         0 N002713 10
+X_U2         N00684 N00766 N002450 N002713 N00824 uA741
+V_V5         N003890 0 10
+X_U3         N00820 N00839 N003890 N004153 N00843 uA741
+V_V6         0 N004153 10
+R_R1         N00699 N00806  1k TC=0,0 
+R_R2         N00766 N00699  200 TC=0,0 
+R_R3         N00824 N00766  1k TC=0,0 
+R_R4         N00820 N00806  1k TC=0,0 
+R_R5         0 N00820  1k TC=0,0 
+R_R6         N00839 N00824  1k TC=0,0 
+R_R7         N00843 N00839  1k TC=0,0 
+V_V7         N00684 0  
++SIN -2.358 0.1 1k 0 0 0
+V_V8         N00680 0  
++SIN -2.368 0.1 1k 0 0 0
+
+**** RESUMING IA.cir ****
+.END
+
+**** 06/19/17 15:00:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-IA"  [ C:\Users\YoonKyoung\instrumentation-PSpiceFiles\SCHEMATIC1\IA.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3.dx         X_U3.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/19/17 15:00:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-IA"  [ C:\Users\YoonKyoung\instrumentation-PSpiceFiles\SCHEMATIC1\IA.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         X_U3.qx         
+               NPN             NPN             NPN             
+       LEVEL    1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75         
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+**** 06/19/17 15:00:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-IA"  [ C:\Users\YoonKyoung\instrumentation-PSpiceFiles\SCHEMATIC1\IA.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00680)   -2.3680 (N00684)   -2.3580 (N00699)   -2.3679 (N00766)   -2.3579     
+
+(N00806)   -2.4178 (N00820)   -1.2089 (N00824)   -2.3078 (N00839)   -1.2089     
+
+(N00843)    -.1099 (X_U1.6) 245.9E-06 (X_U1.7)   -2.4807 (X_U1.8)   -2.4807     
+
+(X_U1.9)    0.0000 (X_U2.6) 232.5E-06 (X_U2.7)   -2.3603 (X_U2.8)   -2.3603     
+
+(X_U2.9)    0.0000 (X_U3.6)-5.389E-06 (X_U3.7)    -.0549 (X_U3.8)    -.0549     
+
+(X_U3.9)    0.0000 (N000702)   10.0000                   (N000703)  -10.0000    
+
+(N002450)   10.0000                   (N002713)  -10.0000                       
+
+(N003890)   10.0000                   (N004153)  -10.0000                       
+
+(X_U1.10)   -2.9751                   (X_U1.11)    9.9608                       
+
+(X_U1.12)    9.9609                   (X_U1.13)   -2.9614                       
+
+(X_U1.14)   -2.9615                   (X_U1.53)    9.0000                       
+
+(X_U1.54)   -9.0000                   (X_U1.90)   -1.2588                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   (X_U2.10)   -2.9651                       
+
+(X_U2.11)    9.9607                   (X_U2.12)    9.9609                       
+
+(X_U2.13)   -2.9514                   (X_U2.14)   -2.9515                       
+
+(X_U2.53)    9.0000                   (X_U2.54)   -9.0000                       
+
+(X_U2.90)   -1.0489                   (X_U2.91)   40.0000                       
+
+(X_U2.92)  -40.0000                   (X_U2.99)    0.0000                       
+
+(X_U3.10)   -1.8163                   (X_U3.11)    9.9605                       
+
+(X_U3.12)    9.9606                   (X_U3.13)   -1.8025                       
+
+(X_U3.14)   -1.8026                   (X_U3.53)    9.0000                       
+
+(X_U3.54)   -9.0000                   (X_U3.90)    1.0990                       
+
+(X_U3.91)   40.0000                   (X_U3.92)  -40.0000                       
+
+(X_U3.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.116E-03
+    V_V2        -1.116E-03
+    V_V3        -1.116E-03
+    V_V4        -1.116E-03
+    V_V5        -1.116E-03
+    V_V6        -1.116E-03
+    V_V7        -7.869E-08
+    V_V8        -7.869E-08
+    X_U1.vb      2.459E-09
+    X_U1.vc      1.142E-11
+    X_U1.ve      7.815E-12
+    X_U1.vlim   -1.259E-03
+    X_U1.vlp    -4.126E-11
+    X_U1.vln    -3.874E-11
+    X_U2.vb      2.325E-09
+    X_U2.vc      1.131E-11
+    X_U2.ve      7.925E-12
+    X_U2.vlim   -1.049E-03
+    X_U2.vlp    -4.105E-11
+    X_U2.vln    -3.895E-11
+    X_U3.vb     -5.389E-11
+    X_U3.vc      9.111E-12
+    X_U3.ve      1.012E-11
+    X_U3.vlim    1.099E-03
+    X_U3.vlp    -3.890E-11
+    X_U3.vln    -4.110E-11
+
+    TOTAL POWER DISSIPATION   6.70E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/19/17 15:00:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-IA"  [ C:\Users\YoonKyoung\instrumentation-PSpiceFiles\SCHEMATIC1\IA.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .52
+

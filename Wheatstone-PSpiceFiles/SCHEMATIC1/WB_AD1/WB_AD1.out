@@ -1,0 +1,212 @@
+
+**** 06/19/17 07:51:24 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-WB_AD1"  [ C:\Users\YoonKyoung\dagegR-PSpiceFiles\SCHEMATIC1\WB_AD1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "WB_AD1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\YoonKyoung\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DAGEGR
+V_V1         N00245 0 5Vdc
+R_R1         N00245 N00252  120 TC=0,0 
+R_R2         N00270 N00245  120 TC=0,0 
+R_R3         0 N00252  121 TC=0,0 
+R_R4         0 N00270  120 TC=0,0 
+X_U1         0 N00819 N004632 N004633 N01373 uA741
+V_V2         0 N004633 10
+V_V3         N004632 0 10
+R_R5         N00252 N00819  1k TC=0,0 
+R_R6         N00832 N00819  1k TC=0,0 
+V_V4         N00832 0  
++SIN 0 0.1 1k 0 0 0
+X_U2         0 N01207 N010250 N010593 N01392 uA741
+V_V5         N010250 0 10
+V_V6         0 N010593 10
+V_V7         N011500 0  
++SIN 0 0.1 1k 0 0 0
+R_R7         N011500 N01207  1k TC=0,0 
+R_R8         N01207 N00270  1k TC=0,0 
+R_R9         N00819 N01373  1k TC=0,0 
+R_R10         N01207 N01392  1k TC=0,0 
+
+**** RESUMING WB_AD1.cir ****
+.END
+
+**** 06/19/17 07:51:24 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-WB_AD1"  [ C:\Users\YoonKyoung\dagegR-PSpiceFiles\SCHEMATIC1\WB_AD1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 06/19/17 07:51:24 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-WB_AD1"  [ C:\Users\YoonKyoung\dagegR-PSpiceFiles\SCHEMATIC1\WB_AD1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/19/17 07:51:24 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-WB_AD1"  [ C:\Users\YoonKyoung\dagegR-PSpiceFiles\SCHEMATIC1\WB_AD1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00245)    5.0000 (N00252)    2.3677 (N00270)    2.3585 (N00819) 32.91E-06     
+
+(N00832)    0.0000 (N01207) 32.86E-06 (N01373)   -2.3675 (N01392)   -2.3583     
+
+(X_U1.6) 257.1E-06 (X_U1.7)   -2.4859 (X_U1.8)   -2.4859 (X_U1.9)    0.0000     
+
+(X_U2.6) 256.1E-06 (X_U2.7)   -2.4762 (X_U2.8)   -2.4762 (X_U2.9)    0.0000     
+
+(N004632)   10.0000                   (N004633)  -10.0000                       
+
+(N010250)   10.0000                   (N010593)  -10.0000                       
+
+(N011500)    0.0000                   (X_U1.10)    -.6077                       
+
+(X_U1.11)    9.9603                   (X_U1.12)    9.9604                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)    9.0000                   (X_U1.54)   -9.0000                       
+
+(X_U1.90)   -2.3676                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6077                   (X_U2.11)    9.9603                       
+
+(X_U2.12)    9.9604                   (X_U2.13)    -.5938                       
+
+(X_U2.14)    -.5938                   (X_U2.53)    9.0000                       
+
+(X_U2.54)   -9.0000                   (X_U2.90)   -2.3583                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.395E-02
+    V_V2        -1.116E-03
+    V_V3        -1.116E-03
+    V_V4         3.291E-08
+    V_V5        -1.116E-03
+    V_V6        -1.116E-03
+    V_V7         3.286E-08
+    X_U1.vb      2.571E-09
+    X_U1.vc      1.137E-11
+    X_U1.ve      7.865E-12
+    X_U1.vlim   -2.368E-03
+    X_U1.vlp    -4.237E-11
+    X_U1.vln    -3.764E-11
+    X_U2.vb      2.561E-09
+    X_U2.vc      1.136E-11
+    X_U2.ve      7.874E-12
+    X_U2.vlim   -2.358E-03
+    X_U2.vlp    -4.236E-11
+    X_U2.vln    -3.765E-11
+
+    TOTAL POWER DISSIPATION   2.64E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/19/17 07:51:24 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-WB_AD1"  [ C:\Users\YoonKyoung\dagegR-PSpiceFiles\SCHEMATIC1\WB_AD1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .73
+

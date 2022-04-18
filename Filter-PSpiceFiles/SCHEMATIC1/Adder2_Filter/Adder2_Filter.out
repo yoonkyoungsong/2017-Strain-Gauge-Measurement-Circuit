@@ -1,0 +1,204 @@
+
+**** 06/19/17 08:56:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Adder2_Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Adder2_Filter.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Adder2_Filter.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\YoonKyoung\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FILTER
+X_U1         0 N00284 N000562 N000563 N00339 uA741
+X_U2         0 N00351 N000862 N000863 N00380 uA741
+R_R1         N001151 N00284  1k TC=0,0 
+R_R2         N001311 N00284  1k TC=0,0 
+R_R3         N00339 N00284  1k TC=0,0 
+R_R4         N00351 N00339  330 TC=0,0 
+R_R5         N00380 N00351  1k TC=0,0 
+V_V1         N000562 0 10
+V_V2         0 N000563 10
+V_V3         N000862 0 10
+V_V4         0 N000863 10
+V_V5         N001311 0  
++SIN 0 0.1 1k 0 0 0
+V_V6         N001151 0  
++SIN 0 358.2u 1k 0 0 0
+C_C1         N00351 N00380  0.047u  TC=0,0 
+
+**** RESUMING Adder2_Filter.cir ****
+.END
+
+**** 06/19/17 08:56:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Adder2_Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Adder2_Filter.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 06/19/17 08:56:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Adder2_Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Adder2_Filter.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/19/17 08:56:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Adder2_Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Adder2_Filter.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00284) 19.25E-06 (N00339) 137.5E-06 (N00351) 19.25E-06 (N00380)-259.4E-06     
+
+(X_U1.6)-20.14E-09 (X_U1.7) 161.3E-06 (X_U1.8) 161.3E-06 (X_U1.9)    0.0000     
+
+(X_U2.6) 28.16E-09 (X_U2.7)-273.3E-06 (X_U2.8)-273.3E-06 (X_U2.9)    0.0000     
+
+(N000562)   10.0000                   (N000563)  -10.0000                       
+
+(N000862)   10.0000                   (N000863)  -10.0000                       
+
+(N001151)    0.0000                   (N001311)    0.0000                       
+
+(X_U1.10)    -.6077                   (X_U1.11)    9.9603                       
+
+(X_U1.12)    9.9603                   (X_U1.13)    -.5938                       
+
+(X_U1.14)    -.5938                   (X_U1.53)    9.0000                       
+
+(X_U1.54)   -9.0000                   (X_U1.90) 476.6E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   (X_U2.10)    -.6077                       
+
+(X_U2.11)    9.9603                   (X_U2.12)    9.9603                       
+
+(X_U2.13)    -.5938                   (X_U2.14)    -.5938                       
+
+(X_U2.53)    9.0000                   (X_U2.54)   -9.0000                       
+
+(X_U2.90)-278.6E-06                   (X_U2.91)   40.0000                       
+
+(X_U2.92)  -40.0000                   (X_U2.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.116E-03
+    V_V2        -1.116E-03
+    V_V3        -1.116E-03
+    V_V4        -1.116E-03
+    V_V5         1.925E-08
+    V_V6         1.925E-08
+    X_U1.vb     -2.014E-13
+    X_U1.vc      9.001E-12
+    X_U1.ve      1.023E-11
+    X_U1.vlim    4.766E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U2.vb      2.816E-13
+    X_U2.vc      9.001E-12
+    X_U2.ve      1.023E-11
+    X_U2.vlim   -2.786E-07
+    X_U2.vlp    -4.000E-11
+    X_U2.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   4.47E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/19/17 08:56:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Adder2_Filter"  [ C:\Users\YoonKyoung\Filter-PSpiceFiles\SCHEMATIC1\Adder2_Filter.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.77
+
